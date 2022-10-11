@@ -26,7 +26,7 @@ class Rooms::MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_to room_path(@message.room), notice: "Message was successfully created." }
+        format.html { redirect_to @message.room }
         format.json { render :show, status: :created, location: @message }
       else
         format.html { render :new, status: :unprocessable_entity }
