@@ -2,6 +2,6 @@
   <% room.messages.each do |message| %>
     <%= render 'rooms/messages/message', message: message %>
   <% end %>
-
-  <%= render 'rooms/messages/form', room: room %>
 </div>
+
+<%= render 'rooms/messages/form', room: room %>
